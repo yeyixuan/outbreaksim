@@ -6,22 +6,20 @@
 
 \code{outbreak simulation functions}}
 \usage{
-outbreaksim(sim = 2, n_sample = 20, ita_m = 0, ita_sig = 0.01,
-  theta_m = 0, theta_sig = 0.01, as = 3, ms = 1, fixed_beta = 1,
-  plotsir = T, seq_length = 10000, transi_m = NULL, transv_m = NULL)
+outbreaksim(n_sample = 20, ita = 0.1, theta = 0.1, z_m = 0, z_sig = 1,
+  as = 3, ms = 1, fixed_beta = 1, plotsir = T, sim = 2,
+  seq_length = 10000, transi_m = NULL, transv_m = NULL)
 }
 \arguments{
-\item{sim}{when sim=1, the beta is set as constant, when sim=2, beta follows a distribution}
-
 \item{n_sample}{sample size}
 
-\item{ita_m}{mean for ita}
+\item{ita}{ita}
 
-\item{ita_sig}{deviation for ita}
+\item{theta}{theta}
 
-\item{theta_m}{mean for theta}
+\item{z_m}{mean for z}
 
-\item{theta_sig}{deviation for theta}
+\item{z_sig}{deviation for z}
 
 \item{as}{shape for sampling time interval distribution}
 
@@ -30,6 +28,8 @@ outbreaksim(sim = 2, n_sample = 20, ita_m = 0, ita_sig = 0.01,
 \item{fixed_beta}{when sim=1, the value for beta}
 
 \item{plotsir}{plot the ground truth of SIR model or not}
+
+\item{sim}{when sim=1, the beta is set as constant, when sim=2, beta follows a distribution}
 
 \item{seq_length}{length of simulated sequence}
 

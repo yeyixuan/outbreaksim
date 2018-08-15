@@ -15,10 +15,10 @@
 #'
 #' @param sim when sim=1, the beta is set as constant, when sim=2, beta follows a distribution
 #' @param n_sample sample size
-#' @param ita_m mean for ita
-#' @param ita_sig deviation for ita
-#' @param theta_m mean for theta
-#' @param theta_sig deviation for theta
+#' @param ita ita
+#' @param theta theta
+#' @param z_m mean for z
+#' @param z_sig deviation for z
 #' @param as shape for sampling time interval distribution
 #' @param ms mean for sampling time interval distribution
 #' @param fixed_beta when sim=1, the value for beta
@@ -28,8 +28,8 @@
 #' @param transv_m rate of transvertion mutation
 
 # Outbreak_simulation
-outbreaksim <- function(sim = 2,n_sample = 20, ita_m = 0, ita_sig=1e-2, theta_m = 0, theta_sig = 1e-2,
-                        as = 3, ms = 1, fixed_beta = 1, plotsir = T,
+outbreaksim <- function(n_sample = 20, ita = 1e-1, theta = 1e-1, z_m = 0, z_sig = 1,
+                        as = 3, ms = 1, fixed_beta = 1, plotsir = T,sim = 2,
                         seq_length = 1e4, transi_m = NULL, transv_m = NULL){
 
   # import library
@@ -43,10 +43,9 @@ outbreaksim <- function(sim = 2,n_sample = 20, ita_m = 0, ita_sig=1e-2, theta_m 
     ## if beta is a constant
     beta <- rep(fixed_beta,n_sample)
   }else{
-    ## if beta follows a distribution
-    ita <- rnorm(n_sample,ita_m,ita_sig)
-    theta <- rnorm(n_sample,theta_m,theta_sig)
-    beta <- exp(ita + theta * (1:n_sample))
+    ## if beta follows a log normal distribution
+    z <- rnorm(n_sample, z_m, z_sig)
+    beta <- exp(ita + theta * z)
   }
 
   # simulate infection times t
