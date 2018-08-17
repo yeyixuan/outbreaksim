@@ -6,7 +6,7 @@ A tool to simulate an outbreak based on simple assupmtions on the transmission, 
 To install the development version from github (the package devtools is required):
 ```
 library(devtools)
-install_github("yeyixuan/outbreaksim")
+install_github("yeyixuan/outbreaksim",ref='trunck')
 ```
 Once installed, the package can be loaded using:
 ```
