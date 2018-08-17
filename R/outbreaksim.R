@@ -13,16 +13,16 @@
 #'
 #' @export
 #'
-#' @param sim when sim=1, the beta is set as constant, when sim=2, beta follows a distribution
+#' @param sim simulation pattern, when sim=1, the rate of exponential distribution (dist. of transmission interval) beta is set as constant, when sim=2, assume log(beta) follows a normal distribution
 #' @param n_sample sample size
-#' @param ita ita
-#' @param theta theta
-#' @param z_m mean for z
-#' @param z_sig deviation for z
-#' @param as shape for sampling time interval distribution
-#' @param ms mean for sampling time interval distribution
-#' @param fixed_beta when sim=1, the value for beta
-#' @param plotsir plot the ground truth of SIR model or not
+#' @param ita ita, fixed value, beta = exp(ita + theta * z)
+#' @param theta theta, fixed value, beta = exp(ita + theta * z)
+#' @param z_m mean for z, beta = exp(ita + theta * z)
+#' @param z_sig deviation for z, beta = exp(ita + theta * z)
+#' @param as shape for sampling time interval gamma distribution
+#' @param ms mean for sampling time interval gamma distribution
+#' @param fixed_beta when sim=1, beta is set as a fixed value
+#' @param plotsir plot the ground truth of SIR model when set as True
 #' @param seq_length length of simulated sequence
 #' @param transi_m rate of transition mutation
 #' @param transv_m rate of transvertion mutation
