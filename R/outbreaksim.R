@@ -15,7 +15,7 @@
 #'
 #' @param sim simulation pattern, when sim=1, the rate of exponential distribution (dist. of transmission interval) beta is set as constant, when sim=2, assume log(beta) follows a normal distribution
 #' @param n_sample sample size
-#' @param ita ita, fixed value, beta = exp(ita + theta * z)
+#' @param ita ita, fixed value, \code{beta = exp(ita + theta * z)}
 #' @param theta theta, fixed value, beta = exp(ita + theta * z)
 #' @param z_m mean for z, beta = exp(ita + theta * z)
 #' @param z_sig deviation for z, beta = exp(ita + theta * z)

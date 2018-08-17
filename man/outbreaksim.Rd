@@ -13,7 +13,7 @@ outbreaksim(n_sample = 20, ita = 0.1, theta = 0.1, z_m = 0, z_sig = 1,
 \arguments{
 \item{n_sample}{sample size}
 
-\item{ita}{ita, fixed value, beta = exp(ita + theta * z)}
+\item{ita}{ita, fixed value, \code{beta = exp(ita + theta * z)}}
 
 \item{theta}{theta, fixed value, beta = exp(ita + theta * z)}
 
