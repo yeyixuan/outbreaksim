@@ -13,23 +13,23 @@ outbreaksim(n_sample = 20, ita = 0.1, theta = 0.1, z_m = 0, z_sig = 1,
 \arguments{
 \item{n_sample}{sample size}
 
-\item{ita}{ita}
+\item{ita}{ita, fixed value, beta = exp(ita + theta * z)}
 
-\item{theta}{theta}
+\item{theta}{theta, fixed value, beta = exp(ita + theta * z)}
 
-\item{z_m}{mean for z}
+\item{z_m}{mean for z, beta = exp(ita + theta * z)}
 
-\item{z_sig}{deviation for z}
+\item{z_sig}{deviation for z, beta = exp(ita + theta * z)}
 
-\item{as}{shape for sampling time interval distribution}
+\item{as}{shape for sampling time interval gamma distribution}
 
-\item{ms}{mean for sampling time interval distribution}
+\item{ms}{mean for sampling time interval gamma distribution}
 
-\item{fixed_beta}{when sim=1, the value for beta}
+\item{fixed_beta}{when sim=1, beta is set as a fixed value}
 
-\item{plotsir}{plot the ground truth of SIR model or not}
+\item{plotsir}{plot the ground truth of SIR model when set as True}
 
-\item{sim}{when sim=1, the beta is set as constant, when sim=2, beta follows a distribution}
+\item{sim}{simulation pattern, when sim=1, the rate of exponential distribution (dist. of transmission interval) beta is set as constant, when sim=2, assume log(beta) follows a normal distribution}
 
 \item{seq_length}{length of simulated sequence}
 
