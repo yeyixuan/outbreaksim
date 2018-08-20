@@ -36,7 +36,7 @@ outbreaksim <- function(n_sample = 20, ita = 1e-1, theta = 1e-1, z_m = 0, z_sig 
   library(stringr)
   library(ape)
   library(phylogram)
-  library(phyloch)
+  #library(phyloch)
 
   # set parameters
   if(sim==1){
