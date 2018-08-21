@@ -56,7 +56,7 @@ outbreaksim <- function(n_sample = 20, ita = 1e-1, theta = 1e-1, z_m = 0, z_sig 
   S <- (n_sample-1):1 # number of susceptible individuals
   I <- 1:(n_sample-1) # number of infectors
   for (i in 2:n_sample) { t[i] <- t[i-1] + rexp(1,beta[i]*S[i-1]*I[i-1])}
-  t <- t*365
+  #t <- t*365
 
   # simulate sampling time
   # based on gamma distribution with shape as, mean ms

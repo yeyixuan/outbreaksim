@@ -1,0 +1,13 @@
+parameters: as:10 ms:5 z_m:0 z_sig:1 ita:0.01 theta:0.01 seq_length:10000 transi_m:1e-04 transv_m:5e-05
+ESS
+mu mS mG slope
+7.638888 40.95932 56.68072 132.1889
+inft_accuracy 0.05
+sample:   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+infector: 0 8 13 3 8 8 3 20 5 4 13 4 2 17 12 2 6 11 15 1 
+support: 1 0.28116 0.39936 0.23132 0.7818 0.1534 0.61352 0.634 0.86368 0.8734 0.35392 0.14172 0.37476 0.28104 0.44448 0.8902 0.46244 0.5622 0.53528 0.98876 
+true_inf: 0 1 2 3 1 2 3 5 5 6 2 2 11 12 6 2 15 11 15 1 
+parameters: as:10 ms:5 z_m:0 z_sig:1 ita:0.01 theta:0.01 seq_length:10000 transi_m:1e-04 transv_m:5e-05
+parameters:  as: 10  ms: 5  z_m: 0  z_sig: 1  ita: 0.01  theta: 0.01  seq_length: 10000  transi_m: 1e-04  transv_m: 5e-05 
+parameters:  as: 10  ms: 5  z_m: 0  z_sig: 1  ita: 0.01  theta: 0.01  seq_length: 10000  transi_m: 1e-04  transv_m: 5e-05 
+parameters: as:10, ms:5, z_m:0, z_sig:1, ita:0.01, theta:0.01, seq_length:10000, transi_m:1e-04, transv_m:5e-05
