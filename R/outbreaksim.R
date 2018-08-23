@@ -24,12 +24,12 @@
 #' @param fixed_beta when \code{sim=1}, beta is set as a fixed value
 #' @param plotsir plot the ground truth of SIR model when set as True
 #' @param seq_length length of simulated sequence
-#' @param transi_m rate of transition mutation
-#' @param transv_m rate of transvertion mutation
+#' @param transi_m rate of transition mutation, if NULL, it is set as 0.1/seq_length
+#' @param transv_m rate of transvertion mutation, if NULL, it is set as 1/transv_m
 
 # Outbreak_simulation
-outbreaksim <- function(n_sample = 20, ita = 1e-1, theta = 1e-1, z_m = 0, z_sig = 1,
-                        as = 3, ms = 1, fixed_beta = 1, plotsir = T,sim = 2,
+outbreaksim <- function(n_sample = 20, ita = log(0.01), theta = log(0.01), z_m = 0, z_sig = 1,
+                        as = 10, ms = 1, fixed_beta = 1, plotsir = T,sim = 2,
                         seq_length = 1e4, transi_m = NULL, transv_m = NULL){
 
   # import library
@@ -78,7 +78,7 @@ outbreaksim <- function(n_sample = 20, ita = 1e-1, theta = 1e-1, z_m = 0, z_sig 
   }
 
   # simulate the sequence-related factor x
-  if(is.null(transi_m)){ transi_m <- 1/seq_length }
+  if(is.null(transi_m)){ transi_m <- 0.1/seq_length }
   if(is.null(transv_m)){ transv_m <- transi_m/2 }
   X <- seqsim(seq_length, transi_m, transv_m, n_sample, t, h)
 

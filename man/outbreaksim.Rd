@@ -6,8 +6,8 @@
 
 \code{outbreak simulation functions}}
 \usage{
-outbreaksim(n_sample = 20, ita = 0.1, theta = 0.1, z_m = 0, z_sig = 1,
-  as = 3, ms = 1, fixed_beta = 1, plotsir = T, sim = 2,
+outbreaksim(n_sample = 20, ita = log(0.01), theta = log(0.01), z_m = 0,
+  z_sig = 1, as = 10, ms = 1, fixed_beta = 1, plotsir = T, sim = 2,
   seq_length = 10000, transi_m = NULL, transv_m = NULL)
 }
 \arguments{
@@ -33,9 +33,9 @@ outbreaksim(n_sample = 20, ita = 0.1, theta = 0.1, z_m = 0, z_sig = 1,
 
 \item{seq_length}{length of simulated sequence}
 
-\item{transi_m}{rate of transition mutation}
+\item{transi_m}{rate of transition mutation, if NULL, it is set as 0.1/seq_length}
 
-\item{transv_m}{rate of transvertion mutation}
+\item{transv_m}{rate of transvertion mutation, if NULL, it is set as 1/transv_m}
 }
 \description{
 outbreaksim is a tool to simulate an outbreak based on simple assupmtions
