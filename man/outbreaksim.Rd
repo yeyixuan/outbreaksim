@@ -7,8 +7,8 @@
 \code{outbreak simulation functions}}
 \usage{
 outbreaksim(n_sample = 20, ita = log(0.01), theta = log(0.01), z_m = 0,
-  z_sig = 1, as = 10, ms = 1, fixed_beta = 1, plotsir = T, sim = 2,
-  seq_length = 10000, transi_m = NULL, transv_m = NULL)
+  z_sig = 0, as = 10, ms = 1, fixed_beta = 1, plotsir = T, sim = 2,
+  seq_length = 1000, transi_m = NULL, transv_m = NULL)
 }
 \arguments{
 \item{n_sample}{sample size}

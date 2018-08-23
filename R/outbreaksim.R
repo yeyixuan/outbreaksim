@@ -28,9 +28,9 @@
 #' @param transv_m rate of transvertion mutation, if NULL, it is set as 1/transv_m
 
 # Outbreak_simulation
-outbreaksim <- function(n_sample = 20, ita = log(0.01), theta = log(0.01), z_m = 0, z_sig = 1,
+outbreaksim <- function(n_sample = 20, ita = log(0.01), theta = log(0.01), z_m = 0, z_sig = 0,
                         as = 10, ms = 1, fixed_beta = 1, plotsir = T,sim = 2,
-                        seq_length = 1e4, transi_m = NULL, transv_m = NULL){
+                        seq_length = 1e3, transi_m = NULL, transv_m = NULL){
 
   # import library
   library(stringr)
